@@ -13,7 +13,9 @@
     <module>ki-shell</module>
   </modules>
   <properties>
-    <kotlin.version>1.9.10</kotlin.version>
+    <kotlin.version>2.1.0</kotlin.version>
+    <!-- TODO: use kotlin.version instead of dokka.version once Dokka gets updated -->
+    <dokka.version>1.9.20</dokka.version>
     <jvm.version>11</jvm.version>
   </properties>
   <build>
@@ -54,13 +56,13 @@
       <plugin>
         <groupId>org.jetbrains.dokka</groupId>
         <artifactId>dokka-maven-plugin</artifactId>
-        <version>${kotlin.version}</version>
+        <version>${dokka.version}</version>
         <configuration>
           <dokkaPlugins>
             <plugin>
               <groupId>org.jetbrains.dokka</groupId>
               <artifactId>kotlin-as-java-plugin</artifactId>
-              <version>${kotlin.version}</version>
+              <version>${dokka.version}</version>
             </plugin>
           </dokkaPlugins>
         </configuration>
